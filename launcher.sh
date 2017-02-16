@@ -160,8 +160,8 @@ sed -e s,control_name,"$control_name",g -e s,sample_name,"$sample_name",g < "$te
 #tr , '\n' < "$sample_path/ordered_genes_temp.txt" > "$sample_path/ordered_genes.txt"
 cp $template_pwd/complete_ordered_genes.txt $sample_path/ordered_genes.txt
 
-# Delete the temp file
-rm -rf "$sample_path/ordered_genes_temp.txt"
+# Delete the temp file (no longer generate this file)
+# rm -rf "$sample_path/ordered_genes_temp.txt"
 
 # ordered_genes.sql
 sed -e s,sample_name,"$sample_name",g -e s,control_name,"$control_name",g < "$template_pwd/ordered_genes.sql" > "$sample_path/ordered_genes.sql"
