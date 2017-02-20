@@ -1,6 +1,6 @@
 #!/bin/bash
 
-module load parallel
+# module load parallel
 
 s_S1_R1=s_s1r1Fastq
 s_S1_R2=s_s1r2Fastq
