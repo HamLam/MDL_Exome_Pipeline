@@ -21,7 +21,8 @@ BOWTIE2_DB=bowtie2_db_value
 S_DB=seq_db
 ref=/panfs/roc/rissdb/genomes/Homo_sapiens/hg19_canonical/seq/hg19_canonical.fa
 
-bwacommand="/home/msistaff/lamx0031/my_software/BWA/bwa-0.7.15/bwa mem -M -t 24 $BWA_DB $s_S1_R1 $s_S1_R2 | samtools view -q 10 -bS - > s_bwa_s1.bam"
+#bwacommand="/home/msistaff/lamx0031/my_software/BWA/bwa-0.7.15/
+bwacommand="bwa mem -M -t 24 $BWA_DB $s_S1_R1 $s_S1_R2 | samtools view -q 10 -bS - > s_bwa_s1.bam"
 btcommand="bowtie2 -p 24 -k 5 -x $BOWTIE2_DB -1 $s_S1_R1 -2 $s_S1_R2 | samtools view -q 10 -bS - > s_bowtie2_s1.bam"
 
 echo ${bwacommand} > $WORKING_PATH/saligncommands
